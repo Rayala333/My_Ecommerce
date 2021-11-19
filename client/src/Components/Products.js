@@ -9,16 +9,17 @@ const Products = ({myproducts}) => {
                 <p>{JSON.stringify(myproducts)}</p>
             } */}
 
-            <div className='row center manclass'>
+           
                 {
                     myproducts.map((element)=>(
                         
-                            <div className='card new' key={element._id}>
+                            <div className='card m-2 pcard ' key={element._id}>
                             <Link to={`details/${element._id}`}>
-                                <img src={element.image} alt="images" className='imageclass'/>
+                                
+                                <img class="card-img img1" src={element.image} alt="images"></img>
                             </Link>
                             
-                                <div className='card-body'>
+                                <div className='card-body text-center'>
                                 <Link to={`details/${element._id}`} className="datail">
                                         <h3>{element.name}</h3>
                                         
@@ -30,12 +31,13 @@ const Products = ({myproducts}) => {
                                 </div>
                             
                             </div>
+                            
                         
                     ))
                     
                 }
                 
-            </div>
+            
         </React.Fragment>
     )
 }

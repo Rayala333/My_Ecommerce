@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    background-color: rgb(115, 115, 219);
+    padding: 2rem;
+    grid-gap: 0.5rem;
+    /* grid-template-rows: 15rem 20rem 20rem; */
+    /* grid-template-columns: 15rem 20rem 40rem; */
+    
+}
+.item{
+    background-color: brown;
+    color: aquamarine;
+    font-size: 3rem;
+    text-align: center;
+   
+}
+.item-1{
+    grid-column: 1 / span 3;
+    grid-row: 1;
+  }
+.item-2 {
+    grid-column: 1;
+    grid-row:2/ span 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.item-6{
+    grid-column: 1/span 2;
+    grid-row: 8;
+}
+.item-5{
+    grid-column: 3;
+    grid-row: 2/span 7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-4{
+    grid-column: 2;
+    grid-row: 3/span 5;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table,th,td{
+    border: 1px solid black;
+    text-align: center;
+   
+}
+table{
+    width: 500px;
+    height: 500px;
+    border-collapse: collapse;
+}
+
+.container{
+    background-color: brown;
+    height: 500px;
+    width: 100%;
+}
+.main{
+    width: 300px;
+    background-color: antiquewhite;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-delay: -1s;
+    position: relative;
+    left: 350px;
+}
+
+
+@keyframes example {
+    /* from {background-color: red;}
+    to {background-color: yellow;} */
+    0%   {background-color:red; left:-1000px; top:0px;}
+    100% {background-color:rgb(140, 0, 255); left:350px; top:0px;};
+   
+  
+  }
+
+  .second{
+    background-color: blue;
+    width: 300px;
+    transition: width 2s;
+    transition:  5s;
+    transition-timing-function: linear;
+}
+.second:hover{
+    width: 500px;
+}

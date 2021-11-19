@@ -13,7 +13,7 @@ mongoose.connect(mongo).then((res)=>{
                                  console.log("db-connected")
                                     },
                             (err)=>{
-                                console.log(erer,"db connection fail")
+                                console.log(err.message,"db connection fail")
                             });
 
                             

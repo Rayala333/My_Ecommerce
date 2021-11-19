@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
 import { Provider } from 'react-redux';
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import thunk from "redux-thunk";
@@ -15,9 +16,8 @@ const rootReducer = combineReducers({
   "details":DetailsReducer
 });
 
-
-
 const store = createStore(rootReducer,applyMiddleware(thunk))
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store = {store}>
