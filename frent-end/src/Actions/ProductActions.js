@@ -10,6 +10,7 @@ export const ProductActions = ()=>{
             });
             try{
                const {data} = await axios.get("http://localhost:8080/brand");
+               console.log(data)
             dispatch({
                 type:PRODUCT_LOADING_SUCCESS, loading:true, product:data, error:""
             })

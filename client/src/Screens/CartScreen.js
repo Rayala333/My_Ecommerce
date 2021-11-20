@@ -1,11 +1,15 @@
 import React from 'react';
-import {useLocation} from 'react-router-dom'
+import {useParams} from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 
-const CartScreen = (props) => {
-    const id = props.match.params.id;
-   
+const CartScreen = () => {
+    // const id = props.match.params.id;
+    // const {id,qty} = useLocation()
+    const {id,qty} = useParams();
+    console.log(id)
+    
 
-    const qty = props.location.search?Number(props.location.search.split("=")[1]):1
+    // const qty = props.location.search?Number(props.location.search.split("=")[1]):1
     return (
         <React.Fragment>
             <h1>{id}</h1>

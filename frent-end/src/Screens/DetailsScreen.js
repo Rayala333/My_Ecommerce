@@ -15,9 +15,12 @@ const DetailsScreen = (props) => {
 
     const id = props.match.params.id;
     const result = useSelector(state=>state.details);
+
     // console.log(props)
     const{loading,product,error} = result;
+
     const dispatch = useDispatch()
+
     useEffect(()=>{
         dispatch(DetailsActions(id))
     },[dispatch])
@@ -35,6 +38,9 @@ const DetailsScreen = (props) => {
             {/* {<h1>{JSON.stringify(result)}</h1>} */}
             {!loading?(<LoadingBox></LoadingBox>):error==="Network Error"?(<MessageBox variant="danger">{error}</MessageBox>):(
                 // JSON.stringify(product)
+
+    
+
                 <>
                 <NavLink to='/' exact={true} strict ><i className='fa fa-home' style={{fontSize:'30px', margin:'1rem 0rem 0rem 1rem'}} ></i></NavLink>
                 
@@ -78,15 +84,18 @@ const DetailsScreen = (props) => {
                                     <div className='gap'>Qty</div>
                                         <select value={qty} onChange={(e)=>{setQty(e.target.value)}}>
                                             {
-                                                [...Array(product.countInStock).keys()].map((e)=>(
-                                                    <option key={e+1}>
-                                                            {e+2}
-                                                    </option>
+                                                [...Array(product.countInStock).keys()].map((x)=>(
+                                                
+                                                <option key={x+1}>
+                                                        {x+1}
+                                                </option>
+                                                
                                                 ))
                                             }
 
                                         </select>
-                                    
+
+                                    {/* {(product.countInStock)} */}
                                             
                                 </div>
                                 <button className='buy' onClick={addTocartHandler}>CART</button>

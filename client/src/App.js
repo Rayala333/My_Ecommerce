@@ -19,11 +19,11 @@ const App = () => {
                     </div>
                 </div>
 
-                <div className="row main m-4">
+                <div className="row main m-4 ">
                   <Routes>
                 <Route path="/" element={<HomeScreen/>} exact={true} strict></Route>
                 <Route path="/details/:id" element={<DetailsScreen/>} exact={true} strict></Route>
-                <Route path="/Cart/:id?" component={CartScreen} exact={true} strict></Route>
+                <Route path="/Cart/:id?" element={<CartScreen/>} exact={true} strict></Route>
                 </Routes>
                 </div>
                 <div className="row footer">
