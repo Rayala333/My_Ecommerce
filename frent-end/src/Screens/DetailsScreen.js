@@ -23,15 +23,15 @@ const DetailsScreen = (props) => {
 
     useEffect(()=>{
         dispatch(DetailsActions(id))
-    },[dispatch])
+    },[dispatch,id])
 
 
-    const [qty,setQty] = useState(2);
+    const [qty,setQty] = useState(1);
     
     // let history= useHistory()
     const addTocartHandler =()=>{
         props.history.push(`/cart/${id}?qty=${qty}`)
-        console.log(id)
+        
     }
     return (
         <React.Fragment>

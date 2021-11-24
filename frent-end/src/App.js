@@ -27,7 +27,7 @@ const App = () => {
         <main>
               <Route path="/" component={HomeScreen} exact={true} strict></Route>
               <Route path="/details/:id" component={DetailsScreen} exact={true} strict></Route>
-              <Route path="/Cart/:id?" component={CartScreen} exact={true} strict></Route>
+              <Route path="/Cart/:id" component={CartScreen} exact={true} strict></Route>
         </main>
 
         <footer className='row center'>Copyright@Royal_it.in</footer>

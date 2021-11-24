@@ -61,13 +61,72 @@
 // console.log(a)
 
 // let a = 100
-// console.log([...Array(a).keys()].map((e)=>(e+1)))
+// console.log([...Array(a).keys()].map((e)=>(e+1)))    // list rendring
 
-let data =[1,1,1,2,2,2,3,3,3,4,4,4,5,6,7]
+// let data =[1,1,1,2,2,2,3,3,3,4,4,4,5,6,7]
 
 
-console.log(data.map((e)=>([e])))
+// console.log(data.map((e)=>([e])))
 
 
 // let a = "my name is prasad"
 // console.log(a.split(""))
+
+
+// let a ="prasad"
+// let b = Array.from(a)
+
+// console.log(b.join(""))
+
+
+// let a = Symbol(100)
+// let b =Symbol(100)
+// // let a =100
+// // let b =100
+
+// console.log(a==b)
+
+
+// let arr1 =['a','b','c']
+
+// var arr2 = arr1
+// arr1 =['f']
+
+// console.log(arr2)
+
+
+
+//immutable
+// let arr1 = ["hello-1","hello-2"]
+// let arr2 =[...arr1]
+// arr1.push("hello-3")
+// arr2.push("hello-4")     
+// console.log(arr1)
+// console.log(arr2)
+
+
+//mutable
+let arr1 = ["hello-1","hello-2"]
+let arr2 =arr1
+arr1.push("hello-3")
+arr2.push("hello-4")     
+console.log(arr1)
+console.log(arr2)
+
+
+// let obj1={
+//     name:"prasad",
+//     age:27,
+//     study:"b-tech",
+// };
+// let obj2={
+//     name:"nani",
+//     age:28,
+//     hob:"cri"
+
+// }
+// // let obj3 = {...obj1,...obj2}
+// let obj3 = {...obj1,...obj2,sly:60000}
+// console.log(obj3)
+
+

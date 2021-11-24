@@ -11,7 +11,7 @@ const DetailsActions =(id)=>{
         })
         try{
            const {data} = await axios.get(`http://localhost:8080/brand/${id}`);
-           
+           console.log(data)
            dispatch({
                type:DATAILS_LOADING_SUCCESS,
                loading:true,

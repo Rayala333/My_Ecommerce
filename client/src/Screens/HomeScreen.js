@@ -23,7 +23,7 @@ const HomeScreen = () => {
             
             {/* <h1>{JSON.stringify(loading)}....{JSON.stringify(products)}....{error}</h1> */}
            
-        
+            {/* https://v5.reactrouter.com/web/api/Hooks */}
 
              {!loading?(<LoadingBox></LoadingBox>):error==="Network Error"?(<MessageBox variant="danger">{error}</MessageBox>):(
                 // JSON.stringify(products)

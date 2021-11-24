@@ -1,19 +1,56 @@
-import React from 'react';
-import {useParams} from 'react-router-dom';
-// import { useLocation } from 'react-router-dom';
+import React,{useEffect} from 'react';
+import {useParams,useLocation, NavLink, useNavigate} from 'react-router-dom';
+import quryString from 'query-string';
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCort } from '../Actions/CartActions';
+
+
+
+
 
 const CartScreen = () => {
-    // const id = props.match.params.id;
-    // const {id,qty} = useLocation()
-    const {id,qty} = useParams();
-    console.log(id)
-    
+   
+    const {id} = useParams();
 
-    // const qty = props.location.search?Number(props.location.search.split("=")[1]):1
+    // const location = useLocation()  
+                                                    // this is used to find wich position we are in 
+    // console.log(location)
+
+    const {search} =useLocation()
+    // console.log(search)
+    const { qty } = quryString.parse(search)
+
+
+
+    const result = useSelector(state=>state.cart)
+    // console.log(result)
+    const dispatch = useDispatch()
+
+    useEffect(()=>{
+            dispatch(addToCort(id,qty))
+    },[dispatch,id,qty])
+   
+    // console.log(id,qty)
+
+    // (`/details/${id}`)
+    const navigate = useNavigate()
+
+    const detailScreen =()=>{
+        // console.log(id)
+        navigate(`/details/${id}`)
+    }
+
+
+
+
+
     return (
         <React.Fragment>
-            <h1>{id}</h1>
-            <h1>{qty}</h1>
+            <NavLink to={`/details/${id}`}><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></NavLink>
+            {/* <button onClick={detailScreen}><i class="fa fa-arrow-circle-left " aria-hidden="true"></i></button> */}
+
+           
+           <h1>{JSON.stringify(result)}</h1>
             
         </React.Fragment>
     )
