@@ -106,12 +106,12 @@
 
 
 //mutable
-let arr1 = ["hello-1","hello-2"]
-let arr2 =arr1
-arr1.push("hello-3")
-arr2.push("hello-4")     
-console.log(arr1)
-console.log(arr2)
+// let arr1 = ["hello-1","hello-2"]
+// let arr2 =arr1
+// arr1.push("hello-3")
+// arr2.push("hello-4")     
+// console.log(arr1)
+// console.log(arr2)
 
 
 // let obj1={
@@ -129,4 +129,23 @@ console.log(arr2)
 // let obj3 = {...obj1,...obj2,sly:60000}
 // console.log(obj3)
 
+let a ="abcd1234shshsh563902bgt"
 
+// console.log(a.split(''))
+
+let b = a.split("")
+// console.log(b.filter(isNaN))  //it is used to filter the string elments
+let c = b.filter(isNaN)
+console.log(c)
+
+// console.log(b.filter(Number))   //it is used to filter the number elements
+let d = b.filter(Number)
+
+console.log(d)
+
+let arr = d.sort((num1,num2)=>{
+    // return num1 - num2
+    return num2 - num1
+})
+
+console.log(arr)

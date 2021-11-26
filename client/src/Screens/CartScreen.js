@@ -23,6 +23,8 @@ const CartScreen = () => {
 
 
     const result = useSelector(state=>state.cart)
+
+    
     // console.log(result)
     const dispatch = useDispatch()
 
@@ -51,6 +53,11 @@ const CartScreen = () => {
 
            
            <h1>{JSON.stringify(result)}</h1>
+
+
+           {/* {cartItems? >= 0(<LoadingBox></LoadingBox>):(
+                <h1>{JSON.stringify(result)}</h1>
+           )} */}
             
         </React.Fragment>
     )

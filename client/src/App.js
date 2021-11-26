@@ -17,7 +17,7 @@ const App = () => {
                       <NavLink to="/" className='brand' >Royal_IT</NavLink>
                     </div>
                     <div className="col icones" >
-                      <NavLink to="/" ><i className="fa fa-shopping-cart"></i></NavLink>
+                      <NavLink to={'/cart/${id}?qty=${qty}'} ><i className="fa fa-shopping-cart"></i></NavLink>
                       <NavLink to="/" ><i className="fa fa-user-circle"></i></NavLink>
                     </div>
                 </div>
