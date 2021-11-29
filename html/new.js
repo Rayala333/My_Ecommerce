@@ -129,23 +129,95 @@
 // let obj3 = {...obj1,...obj2,sly:60000}
 // console.log(obj3)
 
-let a ="abcd1234shshsh563902bgt"
 
-// console.log(a.split(''))
+//number and strring
+// let a ="abcd1234shshsh563902bgt"
 
-let b = a.split("")
-// console.log(b.filter(isNaN))  //it is used to filter the string elments
-let c = b.filter(isNaN)
-console.log(c)
+// // console.log(a.split(''))
 
-// console.log(b.filter(Number))   //it is used to filter the number elements
-let d = b.filter(Number)
+// let b = a.split("")
+// // console.log(b.filter(isNaN))  //it is used to filter the string elments
+// let c = b.filter(isNaN)
+// console.log(c)
 
-console.log(d)
+// // console.log(b.filter(Number))   //it is used to filter the number elements
+// let d = b.filter(Number)
 
-let arr = d.sort((num1,num2)=>{
-    // return num1 - num2
-    return num2 - num1
-})
+// console.log(d)
 
-console.log(arr)
+// let arr = d.sort((num1,num2)=>{
+//     // return num1 - num2
+//     return num2 - num1
+// })
+
+// console.log(arr)
+
+
+
+// let a =[
+//     {"A":['s','xl','m']},
+//     {"b":['xxl','x','m']},
+//     {"c":['l', 'm','s']},   
+// ]
+// console.log(...A,...b,...a)
+// let a =[
+//     {"a":[1,2,3]},
+//     {"a":[4,5,6]}
+// ]
+
+// let arr = [['a','b','c'],['a','b','d'],['b','e']]
+
+// console.log(arr.reduce((f,n)=>{
+//     f = f
+//     return f 
+// }))
+
+
+
+// function a(){
+//     return function b(){
+//         return 10
+//     }
+// }
+// console.log(a()())
+
+
+// let a ="abcd1234shshsh563902bgt"
+
+// let b = a.split('')
+// console.log(b)
+// let c = b.filter(Number)
+// console.log(c)
+// let d = c.sort((num1,num2)=>{
+//     return num2 - num1
+// })[0]
+// console.log(d)
+
+
+// let a ="hello"
+
+// console.log(Array.from(a))
+
+// let a =10
+// console.log(...Array(a).keys())
+
+// if(null){
+
+//     console.log("no")
+
+// }else{
+//     console.log("hello")
+// }
+
+// console.log(1+"3")
+
+
+// b=10;
+
+// let b;
+// a =10;
+// a =10;
+// var a
+// let a
+// console.log(a)
+// console.log(b)

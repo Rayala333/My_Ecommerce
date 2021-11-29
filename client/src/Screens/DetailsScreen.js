@@ -15,11 +15,12 @@ import {useParams,useNavigate} from 'react-router-dom';
 const DetailsScreen = () => {
     
         const {id} = useParams()
+        
 
         // console.log(id)
         // const history= useHistory()
         const navigate = useNavigate()
-        // console.log(location)
+        // console.log(navigate)
         
 
     const result = useSelector(state=>state.details);

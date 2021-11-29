@@ -4,7 +4,19 @@ import {BrowserRouter as Router,Route,NavLink} from 'react-router-dom'
 import DetailsScreen from './Screens/DetailsScreen';
 import CartScreen from './Screens/CartScreen';
 
+import {useSelector,useDispatch} from 'react-redux'
+
 const App = () => {
+
+  const result = useSelector(state=>state.cart)
+
+  const cartItems = result.cartItems
+
+  console.log(cartItems.length)
+
+  // const dispatch = useDispatch()
+
+  
 
   
   return (
@@ -18,7 +30,16 @@ const App = () => {
               <NavLink to="/" className='brand' exact={true} strict>Royal_IT</NavLink>
             </div>
             <div className='cartuser'>
-              <NavLink to="/"><i className="fa fa-shopping-cart"></i></NavLink>
+
+              <NavLink to={'/cart/${id}?qty=${qty}'}><i className='fa fa-shopping-cart'></i>
+              {
+                cartItems.length > 0 && (
+                  <span className='badge'>{cartItems.length}</span>
+                )
+              }
+              
+              </NavLink>
+
               <NavLink to="/"><i className="fa fa-user-circle"></i></NavLink>
             </div>
         </header>

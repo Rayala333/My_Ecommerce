@@ -227,3 +227,47 @@ hr{
   background-color: #c3c3cc;
   
 }
+
+.badge{
+  background-color: #be9010;
+  color: #fff;
+  border-radius: 100%;
+  padding: 0.3rem 0.3rem;
+  font-size: 0.5rem;
+  margin-left: -0.3rem;
+  
+}
+.small{
+  max-width: 7rem;
+  width: 100%;
+  margin: 3rem;
+}
+.cartexp{
+  float: left;
+}
+.elename{
+  margin: 6rem 1rem 0rem 5rem;
+}
+.elecount{
+  margin: 5.7rem 1rem 0rem 0rem;
+}
+.elecost{
+  margin: 5.7rem 1rem 0rem 0rem;
+}
+.eledelete{
+  margin: 5.7rem 1rem 0rem 3rem;
+  background-color: #202040;
+  max-width: 6rem;
+  font-size: 15px;
+  color: #fff;
+  padding: 0.3rem;
+}
+.chickout {
+  margin: 9rem 1rem 0rem 6rem;
+  width: 100%;
+  
+}
+.chickout li{
+  text-decoration: none;
+  list-style-type: none;
+}

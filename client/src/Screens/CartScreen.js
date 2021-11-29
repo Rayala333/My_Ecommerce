@@ -13,15 +13,17 @@ const CartScreen = () => {
     const {id} = useParams();
 
     // const location = useLocation()  
+    
                                                     // this is used to find wich position we are in 
     // console.log(location)
 
     const {search} =useLocation()
-    // console.log(search)
+    console.log(search)
     const { qty } = quryString.parse(search)
 
 
 
+    
     const result = useSelector(state=>state.cart)
 
     
@@ -35,29 +37,25 @@ const CartScreen = () => {
     // console.log(id,qty)
 
     // (`/details/${id}`)
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
-    const detailScreen =()=>{
-        // console.log(id)
-        navigate(`/details/${id}`)
-    }
-
+    // const detailScreen =()=>{
+    //     // console.log(id)
+    //     navigate(`/details/${id}`)
+    // }
+   
 
 
 
 
     return (
         <React.Fragment>
-            <NavLink to={`/details/${id}`}><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></NavLink>
+            {/* <NavLink to={`/details/${id}`}><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></NavLink> */}
             {/* <button onClick={detailScreen}><i class="fa fa-arrow-circle-left " aria-hidden="true"></i></button> */}
 
-           
+          
+        
            <h1>{JSON.stringify(result)}</h1>
-
-
-           {/* {cartItems? >= 0(<LoadingBox></LoadingBox>):(
-                <h1>{JSON.stringify(result)}</h1>
-           )} */}
             
         </React.Fragment>
     )
