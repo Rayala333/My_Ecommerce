@@ -71,7 +71,7 @@ const CartScreen = (props) => {
                                                     )
                                                 }
                                                 >
-                                                {[...Array(element.qty).keys()].map((x) => (
+                                                {[...Array(element.countInStock).keys()].map((x) => (
                                                     <option key={x + 1} value={x + 1}>
                                                     {x + 1}
                                                     </option>

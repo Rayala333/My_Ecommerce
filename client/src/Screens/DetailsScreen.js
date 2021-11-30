@@ -60,18 +60,18 @@ const DetailsScreen = () => {
                 <div className="row ">
                  <NavLink to='/'  ><i className='fa fa-home' style={{fontSize:'30px', margin:'1rem 0rem 0rem 1rem'}} ></i></NavLink>
                     
-                    <div className="col-2 mt-5 ">
+                    <div className="col-md-2 mt-5 ">
                         <img src={product.image} alt="images"  className="w-100"/>
                     </div>
 
-                    <div className="col-5 mt-5 fs-5">
+                    <div className="col-md-5 mt-5 fs-5">
                         <p>{product.name}</p><hr></hr>
                         <h4>Brand: {product.brand}</h4>
                         <p>price: &#8377;{product.cost}</p>
                         <span><Rating rating={product.rating} numReviews={product.numReviews}></Rating></span>
                         <p>{product.description}</p><hr></hr>
                     </div>
-                    <div className="col-4  mx-5 mt-5">
+                    <div className="col-md-4  mx-5 mt-5">
                         <ul className="card mt-5 bg-light">
                             <li className="row ">
                                 <div className="col-6 fs-3">Name</div>

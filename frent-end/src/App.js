@@ -31,7 +31,7 @@ const App = () => {
             </div>
             <div className='cartuser'>
 
-              <NavLink to={'/cart/${id}?qty=${qty}'}><i className='fa fa-shopping-cart'></i>
+              <NavLink to={'/cart'}><i className='fa fa-shopping-cart'></i>
               {
                 cartItems.length > 0 && (
                   <span className='badge'>{cartItems.length}</span>
@@ -49,6 +49,7 @@ const App = () => {
               <Route path="/" component={HomeScreen} exact={true} strict></Route>
               <Route path="/details/:id" component={DetailsScreen} exact={true} strict></Route>
               <Route path="/Cart/:id" component={CartScreen} exact={true} strict></Route>
+              <Route path="/Cart" component={CartScreen} exact={true} strict></Route>
         </main>
 
         <footer className='row center'>Copyright@Royal_it.in</footer>

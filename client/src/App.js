@@ -4,9 +4,13 @@ import HomeScreen from './Screens/HomeScreen';
 import DetailsScreen from './Screens/DetailsScreen';
 import CartScreen from './Screens/CartScreen';
 
+import {useSelector,useDispatch} from 'react-redux'
+
 const App = () => {
 
+  const result = useSelector(state=>state.cart)
 
+  const cartItems = result.cartItems
   
   return (
     <React.Fragment>
@@ -17,7 +21,13 @@ const App = () => {
                       <NavLink to="/" className='brand' >Royal_IT</NavLink>
                     </div>
                     <div className="col icones" >
-                      <NavLink to={'/cart/${id}?qty=${qty}'} ><i className="fa fa-shopping-cart"></i></NavLink>
+                      <NavLink to={'/cart/${id}?qty=${qty}'} ><i className="fa fa-shopping-cart"></i>
+                      {
+                        cartItems.length > 0 && (
+                          <span class="badge badge-primary shift ">{cartItems.length}</span>
+                        )
+                      }
+                      </NavLink>
                       <NavLink to="/" ><i className="fa fa-user-circle"></i></NavLink>
                     </div>
                 </div>

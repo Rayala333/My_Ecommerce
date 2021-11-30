@@ -6,8 +6,8 @@ export const addToCort = (id,qty)=>{
     return async (dispatch,getState)=>{
         try{
             const {data} = await axios.get(`http://localhost:8080/brand/${id}`);
-            console.log(data)
-           console.log(data)
+        //     console.log(data)
+        //    console.log(data)
            dispatch({
                type:ADD_ITEM,
                data:{
@@ -17,6 +17,7 @@ export const addToCort = (id,qty)=>{
                    "rating":data.rating,
                    "image":data.image,
                    "cost":data.cost,
+                   "countInStock":data.countInStock,
                    qty
                }
            })
