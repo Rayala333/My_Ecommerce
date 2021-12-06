@@ -221,3 +221,7 @@
 // let a
 // console.log(a)
 // console.log(b)
+
+let arr = [xl,l,m,xxl]
+
+console.log(arr.map((e)=>(e)))

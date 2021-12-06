@@ -22,7 +22,7 @@ const CartScreen = () => {
     console.log(search)
     const { qty } = quryString.parse(search)
 
-
+    
 
     
     const result = useSelector(state=>state.cart)
@@ -48,11 +48,12 @@ const CartScreen = () => {
 
     const removeFromCartHandler = (id)=>{
         dispatch(removeItemCart(id));
+        alert(`item is delated ${id}`)
     }
    
     const checkoutHandler = ()=>{
         console.log("payment")
-        alert('payment')
+        alert(`dont't go back will doing pament `)
     }
 
 
@@ -66,7 +67,7 @@ const CartScreen = () => {
         
            {/* <h1>{JSON.stringify(result)}</h1> */}
            <div className='row'>
-               <div className='col-7'>
+               <div className='col-lg-7 col-sm-12 col-xs-12 col-md-12'>
                    <h1>Shoping Cort...</h1>
                    {
                         cartItems.length === 0?(<MessageBox>Cart is Empty <br/><NavLink to='/' exact={true} strict>Go for shoping</NavLink></MessageBox>):(
@@ -74,15 +75,15 @@ const CartScreen = () => {
                                 {
                                     cartItems.map((element)=>(
                                         <li key={element.id} className='row '>
-                                            <div className='col-2 '>
+                                            <div className='col-lg-2 col-sm-12  col-md-2'>
                                                 <img src={element.image} className='img-fluid' alt='imagess'/>
                                             </div>
-                                            <div className='col-3 cartProduct'>
+                                            <div className='col-lg-2 col-sm-2  col-xs-3 col-md-2 cartProduct'>
                                             <NavLink to={`/details/${element._id}`}>
                                                 <h4>{element.name}</h4>
                                             </NavLink>
                                             </div>
-                                            <div className='col-2 cartProduct'> 
+                                            <div className='col-2 col-sm-2  col-xs-3 col-md-2 cartProduct'> 
                                             <select value={element.qty}  onChange={(e) =>dispatch(addToCort(element._id, Number(e.target.value)))}>
                                                
                                             {[...Array(element.countInStock).keys()].map((x) => (
@@ -92,14 +93,18 @@ const CartScreen = () => {
                                                 ))}
 
                                             </select>
+                                           
                                             </div>
-                                            <div className='col-2 cartProduct'> 
+                                            <div className='col-2 col-sm-2 col-xs-3 col-md-2 cartProduct'> 
                                                      ₹{ element.cost}
                                             </div>
-                                            <div className='col-2 cartProduct'> 
+                                            <div className='col-2 col-sm-2 col-md-2 cartProduct'> 
                                                     <button onClick={() => removeFromCartHandler(element._id)}>
-                                                                Delete
+                                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                     </button>
+                                            </div>
+                                            <div>
+                                            
                                             </div>
 
                                         </li>
@@ -109,12 +114,14 @@ const CartScreen = () => {
                         )
                    }
                </div>
-               <div className='col-4 mt-5 card-body cartProduct'>
-                       <ul className="pament">
+               <div className='col-lg-4 col-sm-12  col-xs-12 card-body cartProduct'>
+                       <ul className="pament ">
                        <li>
-                              <h2>
-                                Subtotal ({cartItems.reduce((a, c) => a+c.qty, 0)} items) : $
+                              <h2 className='col-sm-12 col-xs-12 col-md-6 col-lg-12'>
+                                Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items) : ₹
                                 {cartItems.reduce((a, c) => a + c.cost * c.qty, 0)}
+                                
+                               
                               </h2>
                             </li>
                             
@@ -122,8 +129,9 @@ const CartScreen = () => {
                                 <button
                                     type="button"
                                     onClick={checkoutHandler}
-                                    className='proceed'
-                                    disabled={cartItems.length == 0}
+                                    className='proceed col-md-6 '
+                                    disabled={cartItems.length === 0}
+                                   
                                 >
                                 Proceed to Checkout
                             </button>

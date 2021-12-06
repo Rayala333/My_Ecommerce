@@ -5,7 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow-x: hidden; */
 }
+*{
+  overflow-x: hidden;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -21,6 +26,13 @@ code {
 header{
   background-color: #203040;
   color: #fff;
+  
+}
+.logo{
+  font-family: 'Cursive', Courier, monospace;
+}
+header li{
+  list-style-type: none;
 }
 main{
   background-color: #95a6b8;
@@ -30,3 +42,23 @@ footer{
   background-color: #203040;
   color: #fff;
 }
+::-webkit-input-placeholder {
+  text-align: center;
+}
+:-moz-placeholder {
+  text-align: center;
+}
+
+@media screen and (max-width:400px){
+
+  .logo{
+      margin-left: 7rem;
+  }
+}
+@media screen and (max-width:750px){
+
+  .logo{
+      margin-left: 8rem;
+  }
+}
+

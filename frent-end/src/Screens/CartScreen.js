@@ -12,6 +12,8 @@ const CartScreen = (props) => {
     const id = props.match.params.id;
     const qty = props.location.search?Number(props.location.search.split("=")[1]):1
 
+    
+
     const result = useSelector(state=>state.cart)
 
     const {cartItems} =result
@@ -55,7 +57,7 @@ const CartScreen = (props) => {
                                     cartItems.map((element)=>(
                                         <li key={element.id} className='row'>{
                                             <>
-                                            <div className=' col-2'>
+                                            <div className=' col-2 '>
                                                 <div><img src={element.image} alt="images" className='small' /></div>
                                             </div>
                                             <div className='col-2 elename'>
@@ -79,11 +81,11 @@ const CartScreen = (props) => {
                                                 </select>
                                                 
                                             </div>
-                                            <div className='elecost'>${element.cost}</div>
+                                            <div className='elecost'>₹{element.cost}</div>
 
                                             <div>
                                             <button type="button"className='eledelete' onClick={() => removeFromCartHandler(element._id)}>
-                                                Delete
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
                                             </button>
                                            </div>
 
@@ -100,7 +102,7 @@ const CartScreen = (props) => {
                 <ul>
                             <li>
                               <h2>
-                                Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items) : $
+                                Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items) : ₹
                                 {cartItems.reduce((a, c) => a + c.cost * c.qty, 0)}
                               </h2>
                             </li>
