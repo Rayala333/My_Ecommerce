@@ -11,11 +11,11 @@ const NavBar = () => {
             <div className='navbar'>
                 <div className='nava-container'>
                     <NavLink to="/" exact className='nav-logo'>Logo</NavLink>
-                    <ul className={click ? "nav-menu active":"nav-menu"}>
-                        <li className='nav-item'><NavLink to="/" activeClassName="active" className='nav-links' onClick={handlerClick}>Home</NavLink></li>
-                        <li className='nav-item'><NavLink to="/about" className='nav-links' onClick={handlerClick}>About</NavLink></li>
-                        <li className='nav-item'><NavLink to="/services" className='nav-links' onClick={handlerClick}>Services</NavLink></li>
-                        <li className='nav-item'><NavLink to="/contact" className='nav-links' onClick={handlerClick}>Contact</NavLink></li>
+                    <ul className={click ? "nav-menu active":"nav-menu"} onClick={handlerClick}>
+                        <li className='nav-item'><NavLink to="/" activeClassName="active" className='nav-links' >Home</NavLink></li>
+                        <li className='nav-item'><NavLink to="/about" className='nav-links' >About</NavLink></li>
+                        <li className='nav-item'><NavLink to="/services" className='nav-links' >Services</NavLink></li>
+                        <li className='nav-item'><NavLink to="/contact" className='nav-links' >Contact</NavLink></li>
                     </ul>
                     <div className='nav-icon' onClick={handlerClick}>
                     <i className={click? "fa fa-times" : "fa fa-bars"} ></i>
