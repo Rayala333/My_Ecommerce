@@ -112,7 +112,7 @@ const CartScreen = (props) => {
                                     type="button"
                                     onClick={checkoutHandler}
                                     className="primary block"
-                                    disabled={cartItems.length == 0}
+                                    disabled={cartItems.length === 0}
                                 >
                                 Proceed to Checkout
                             </button>

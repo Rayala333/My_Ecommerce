@@ -50,7 +50,6 @@ code {
   list-style: none;
   text-align: center;
   margin-right: 2rem;
-
 }
 .nav-links{
   color: #fff;
@@ -62,9 +61,20 @@ code {
 .nav-item{
   line-height: 40px;
   margin-right: rem;
+  
 }
 .nav-item .active{
   color: #ffdd40;
+}
+
+.nav-item  ul li{
+  display: none;
+  
+}
+
+.nav-item:hover ul li{
+  display: block;
+  top: 300px;
 }
 .nav-icon{
   display: none;
@@ -78,11 +88,12 @@ code {
     position: absolute;
     top: 80px;
     left:-110%;
+    
   }
   .nav-menu.active{
     background-color: #2d6166;
     left: 0px;
-    opacity: 1;
+    /* opacity: 1; */
     transition: all 0.5s ease-in-out; 
   }
   .nav-links{

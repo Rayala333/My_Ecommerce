@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router,Route,Routes,NavLink} from 'react-router-dom';
 import HomeScreen from './Screens/HomeScreen';
-import DetailsScreen from './Screens/DetailsScreen';
+import DetailsScreen from './Screens/DetailScreen';
 import CartScreen from './Screens/CartScreen';
 
 import {useSelector,} from 'react-redux'

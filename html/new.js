@@ -222,6 +222,100 @@
 // console.log(a)
 // console.log(b)
 
-let arr = [xl,l,m,xxl]
+// let arr = [xl,l,m,xxl]
 
-console.log(arr.map((e)=>(e)))
+// console.log(arr.map((e)=>(e)))
+
+// const arr =["angular" ,"react"]
+// console.log(arr.map((e)=>{
+//     return Array.from(e).reverse().join("")
+// }))
+
+
+// console.log(arr.reverse())
+
+
+// const arr = "my name is prasad"
+
+
+// const arr1 = arr.split()
+// console.log(arr1)
+// console.log(
+// arr1.map((element)=>(
+//     Array.from(element).reverse().join("")
+// )))
+
+
+// const arr2 = 'hi hello this is prasad'
+
+// console.log(Array.from(arr2))
+// const arr3 = Array.from(arr2)
+
+// console.log(arr3.reverse().join(""))
+
+
+
+// const arr4 = ["hi","hello"]
+
+// console.log(arr4.reverse())
+
+// console.log(Array.from(arr4).reverse().join(" "))
+
+
+
+// const arr5 = [1,2,3,4,1,2,3,6,7,8]
+
+// console.log(arr5.filter((e,i)=>(
+//     arr5.indexOf(e)==i
+   
+// )))
+
+// const arr6 = [1,2,3,4,1,2,3,5,6,7,8,9,1,7,9]
+
+// const arr7 = [...new Set(arr6)]
+// console.log(arr7)
+
+
+// const arr8 = [1,12,2,3,10,111,14,5,17,20,6]
+// const arr9 = arr8.sort((num1,num2)=>(
+// //    num1-num2
+// num2-num1
+// ))
+// console.log(arr9)
+
+// ---starting the Array to object and object to Array----
+
+// const my = [["key-1","hello"],["key-2","hello-2"]]
+
+// const obj = Object.fromEntries(my);
+// console.log(obj)  // convart to Array to object
+
+// const entries = Object.entries(obj)
+// console.log(entries) // convart to object to Array
+
+// const entries1 = Object.values(obj)
+// console.log(entries1) // find to array of values
+
+// const entries2 = Object.keys(obj)
+// console.log(entries2) // find to array of keys
+
+// ---End the Array to object and object to Array----
+
+
+
+const arr = 'hi hello my name'
+
+console.log(Array.from(arr).reverse().join(""))
+
+
+const arr1 = [1,2,3,4,5]
+
+console.log(arr1.reverse())
+
+const arr2 = '1234567'
+console.log(Array.from(arr2).reverse())
+
+console.log(Array.from(arr2).find((e,i)=>(
+    e==5
+)))
+console.log(Array.from(arr2).includes('1'))

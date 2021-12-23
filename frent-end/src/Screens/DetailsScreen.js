@@ -47,10 +47,10 @@ const DetailsScreen = (props) => {
 
 
                 <div className='details'>
-                    <div className='dimage'>
+                    <div className='dimage '>
                             <img src={product.image} alt="images" />
                     </div>
-                    <div className='ddetails'>
+                    <div className='ddetails '>
                             <p>{product.name}</p><hr></hr>
                             <h4>Brand: {product.brand}</h4>
                             <p>price: &#8377;{product.cost}</p>

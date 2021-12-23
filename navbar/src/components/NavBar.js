@@ -8,13 +8,14 @@ const NavBar = () => {
     const handlerClick = ()=> setClick(!click);
     return (
         <React.Fragment>
+            
             <div className='navbar'>
                 <div className='nava-container'>
                     <NavLink to="/" exact className='nav-logo'>Logo</NavLink>
                     <ul className={click ? "nav-menu active":"nav-menu"} onClick={handlerClick}>
-                        <li className='nav-item'><NavLink to="/" activeClassName="active" className='nav-links' >Home</NavLink></li>
-                        <li className='nav-item'><NavLink to="/about" className='nav-links' >About</NavLink></li>
-                        <li className='nav-item'><NavLink to="/services" className='nav-links' >Services</NavLink></li>
+                        <li className='nav-item'><NavLink to="/"  className='nav-links' >Home</NavLink></li>
+                        <li className='nav-item'><NavLink to="/about"  className='nav-links' >About</NavLink></li>
+                        <li className='nav-item'><NavLink to="/services" className='nav-links' >Services</NavLink> </li>
                         <li className='nav-item'><NavLink to="/contact" className='nav-links' >Contact</NavLink></li>
                     </ul>
                     <div className='nav-icon' onClick={handlerClick}>
